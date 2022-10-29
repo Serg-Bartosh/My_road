@@ -1,22 +1,22 @@
-def get_number_triangle_3(num):
-    total = 0
+def get_number_triangle_4(num):
     for i in range(1, num+1, 1):
-        for j in range(1, i+1):
-            total += 1
-            print(f'{total}', end=' ')
+        for j in range(i):
+            print(j+1, end='')
+        for k in range(i-1, 0, -1):
+            print(k, end='')
         print()
 
 
 num = int(input())
-get_number_triangle_3(num)
+get_number_triangle_4(num)
 
 #Дано натуральное число nn.
-# Напишите программу, которая печатает численный треугольник с высотой равной nn,
+# Напишите программу, которая печатает численный треугольник с высотой равной n,
 # в соответствии с примером:
 # 1
-# 2 3
-# 4 5 6
-# 7 8 9 10
-# 11 12 13 14 15
-# 16 17 18 19 20 21
+# 1 2 1
+# 1 2 3 2 1
+# 1 2 3 4 3 2 1
+# 1 2 3 4 5 4 3 2 1
+# 1 2 3 4 5 6 5 4 3 2 1
 # ...
