@@ -1,7 +1,7 @@
 def tabl(num):
-    for _ in range(1, num+1, 1):
-        for _ in range(3):
-            print(f'{num}', end=' ')
+    for i in range(1, num+1, 1):
+        for _ in range(1, 6):
+            print(f'{i}', end=' ')
         print()
 
 
