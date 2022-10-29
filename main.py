@@ -1,22 +1,19 @@
-def get_number_triangle_4(num):
-    for i in range(1, num+1, 1):
-        for j in range(i):
-            print(j+1, end='')
-        for k in range(i-1, 0, -1):
-            print(k, end='')
-        print()
+def dividers(border_1, border_2):
+    summ_count = 0
+    max_i = 0
+    for i in range(border_1, border_2 + 1):
+        count = 0
+        for j in range(1, i + 1):
+            if i % j == 0:
+                count += j
+            if count >= summ_count:
+                summ_count = count
+                max_i = i
+    print(max_i, summ_count)
 
 
-num = int(input())
-get_number_triangle_4(num)
+border_1, border_2 = map(int, input().split())
+dividers(border_1, border_2)
 
-#Дано натуральное число nn.
-# Напишите программу, которая печатает численный треугольник с высотой равной n,
-# в соответствии с примером:
-# 1
-# 1 2 1
-# 1 2 3 2 1
-# 1 2 3 4 3 2 1
-# 1 2 3 4 5 4 3 2 1
-# 1 2 3 4 5 6 5 4 3 2 1
-# ...
+#На вход программе подается два натуральных числа aa и bb (a < ba< b). Напишите программу,
+# которая находит натуральное число из отрезка [a; \, b][a;b] с максимальной суммой делителей.
